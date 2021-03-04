@@ -13,10 +13,12 @@ namespace UnitTest1
 		TEST_METHOD(TestMethod1)
 		{
 			
-			Time g;
-			bool t;
-			t = g.Poriv1(1,1,1,1,1,1);
-			Assert::AreEqual(t, false);
+			Time :: Triad t2;
+			t2.Init(1, 2, 3);
+			Time t1;
+			t1.Init1(t2);
+			bool t = t1.Equal();
+			Assert::AreEqual(t, true);
 		}
 	};
 }
